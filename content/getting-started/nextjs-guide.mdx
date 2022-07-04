@@ -45,7 +45,7 @@ wrap the `Component` with the `ChakraProvider`:
 
 ```jsx live=false
 // pages/_app.js
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -53,9 +53,9 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
     </ChakraProvider>
   )
-}
+};
 
-export default MyApp
+export default MyApp;
 ```
 
 ### Customizing theme
@@ -68,10 +68,10 @@ with your customizations.
 
 ```jsx live=false
 // pages/_app.js
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react';
 
 // 1. Import the extendTheme function
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react';
 
 // 2. Extend the theme to include custom colors, fonts, etc
 const colors = {
@@ -80,7 +80,7 @@ const colors = {
     800: '#153e75',
     700: '#2a69ac',
   },
-}
+};
 
 const theme = extendTheme({ colors })
 
@@ -91,7 +91,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
     </ChakraProvider>
   )
-}
+};
 
 export default MyApp;
 ```
@@ -113,9 +113,9 @@ for local storage syncing to work correctly.
 ```jsx live=false ln={14}
 // pages/_document.js
 
-import { ColorModeScript } from '@chakra-ui/react'
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
-import theme from './theme'
+import { ColorModeScript } from '@chakra-ui/react';
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+import theme from './theme';
 
 export default class Document extends NextDocument {
   render() {
@@ -131,7 +131,7 @@ export default class Document extends NextDocument {
       </Html>
     )
   }
-}
+};
 ```
 
 #### Notes on TypeScript 🚨
